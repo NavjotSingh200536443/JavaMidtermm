@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+
+<BorderPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CarLotController">
+    <top>
+        <HBox spacing="10.0" alignment="CENTER">
+            <Label text="Total Cars Sold:" />
+            <Label fx:id="totalCarsLabel" />
+            <Label text="Total Sales:" />
+            <Label fx:id="totalSalesLabel" />
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="10.0">
+            <Label text="Year:" />
+            <ComboBox fx:id="yearComboBox" />
+        </VBox>
+    </left>
+
+    <center>
+        <TableView fx:id="carTableView" />
+
+        <BarChart fx:id="barChart">
+            <xAxis>
+                <CategoryAxis fx:id="manufacturerAxis" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="countAxis" />
+            </yAxis>
+        </BarChart>
+    </center>
+
+    <right>
+        <ImageView fx:id="iconImageView" fitHeight="100.0" fitWidth="100.0" preserveRatio="true" />
+    </right>
+</BorderPane>
